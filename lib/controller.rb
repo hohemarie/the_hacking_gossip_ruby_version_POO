@@ -45,6 +45,18 @@ class Gossip
       end
       return all_gossips
   end
+  def should_be_deleted(line)
+    content = gets 
+    #line_number = 0
+    f = File.new("fichier.csv","a+")
+    f.each do |line|
+      #line_number +=1
+      #puts line_number
+      if (line.split(" ")&content.split(" ")).length > content.length.to_i*0.8
+        return true
+      end
+    end
+  end
   def destroy
     #google fichier csv mode read write ruby
     print "quel potin voulez vous supprimer, donnez le numero du potin,rentrez un entier svp"
