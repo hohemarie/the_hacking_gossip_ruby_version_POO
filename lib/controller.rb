@@ -17,6 +17,9 @@ class Controller
       puts gossip
     end
   end
+#demander en boucle à l'utilisateur s'il veut afficher, créer ou détruire des potins
+  def display_gossip
+  end
 end
 
 class Gossip
