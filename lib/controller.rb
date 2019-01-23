@@ -10,3 +10,8 @@ class Gossip
     @author = author
   end
 end
+
+def save 
+  my_gossip = Gossip.new(author, content)
+  my_gossip.save
+end
