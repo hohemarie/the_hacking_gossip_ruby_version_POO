@@ -31,6 +31,7 @@ class Gossip
     all_gossips = []
     # chaque ligne de ton CSV.each do |ligne|
     # methode self.all qui va lire chaque ligne du CSV
+    # ruby lire chaque ligne CSV 
     fichier = File.open("fichier.csv","r") 
   end
   def destroy
