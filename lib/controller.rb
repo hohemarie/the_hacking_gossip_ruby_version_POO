@@ -32,7 +32,11 @@ class Gossip
     # chaque ligne de ton CSV.each do |ligne|
     # methode self.all qui va lire chaque ligne du CSV
     # ruby lire chaque ligne CSV 
-    fichier = File.open("fichier.csv","r") 
+    #fichier = File.open("fichier.csv","r") 
+    File.open('fichier.csv','r')
+      CSV.foreach(f,col_sep:"\t") do |csv_row|
+        #lire la ligne du fichier csv
+      end
   end
   def destroy
     print "quel potin voulez vous supprimer"
