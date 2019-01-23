@@ -47,8 +47,27 @@ class Gossip
   end
   def destroy
     #google fichier csv mode read write ruby
-    print "quel potin voulez vous supprimer"
-    potin = gets
+    print "quel potin voulez vous supprimer, donnez le numero du potin,rentrez un entier svp"
+    potin_number = gets.chomp.to_i
+    #lire le fichier et chercher la ligne du fichier qui doit etre supprimee
+    #ruby file read
+    #File.open("fichier.csv","a+").each do |line|
+    #supprimer la ligne du potin qui doit etre supprimee 
+    #si chaque ligne est dans une array, le numero de la ligne du potin qui doit etre supprime est potin_number - 1 dans larray
+    f = File.new("fichier.csv", 'a+')
+    f.each do |line|
+      if should_be_deleted(line)
+    # seek back to the beginning of the line.
+        f.seek(-line.length, IO::SEEK_CUR)
+
+    # overwrite line with spaces and add a newline char
+        f.write(' ' * (line.length - 1))
+        f.write("\n")
+      end
+    end
+f.close
+
+File.new(filename).each {|line| p line }
     #retirer ce potin du csv
   end
 end
