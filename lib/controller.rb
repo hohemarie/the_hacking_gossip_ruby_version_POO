@@ -32,6 +32,11 @@ class Gossip
     # chaque ligne de ton CSV.each do |ligne|
     # 
   end
+  def destroy
+    print "quel potin voulez vous supprimer"
+    potin = gets
+    #retirer ce potin du csv
+  end
 end
 
 def save 
