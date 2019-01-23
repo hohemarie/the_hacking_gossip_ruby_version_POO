@@ -12,6 +12,11 @@ class Controller
     Gossip.all #demander au model un array qui contient tous les potins que l'on a en base
     View.index_gossips.self
   end
+  def index_gossips(gossips)
+    gossips.each do |gossip|
+      puts gossip
+    end
+  end
 end
 
 class Gossip
@@ -20,6 +25,12 @@ class Gossip
   def initialize(author, content)
     @content = content
     @author = author
+  end
+  def self.all
+    # creation d une array vide qui s appelle all_gossips
+    all_gossips = []
+    # chaque ligne de ton CSV.each do |ligne|
+    # 
   end
 end
 
