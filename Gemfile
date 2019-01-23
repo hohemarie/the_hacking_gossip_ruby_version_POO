@@ -7,3 +7,5 @@ gem 'rspec', :require => 'spec' #gem 'rspec', :require => false
 gem 'sqlite3'
 gem 'nokogiri', :git => 'https://github.com/tenderlove/nokogiri.git', :branch => '1.4'
 ruby '2.5.3.'
+gem 'pry'
+gem 'roo'
