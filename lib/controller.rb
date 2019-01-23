@@ -12,6 +12,7 @@ class Gossip
 end
 
 def save 
-  my_gossip = Gossip.new(author, content)
+  my_gossip = File.open("gossip.csv","a")
+  Gossip.new(author, content) >> my_gossip
   my_gossip.save
 end
