@@ -54,6 +54,9 @@ class Gossip
     #File.open("fichier.csv","a+").each do |line|
     #supprimer la ligne du potin qui doit etre supprimee 
     #si chaque ligne est dans une array, le numero de la ligne du potin qui doit etre supprime est potin_number - 1 dans larray
+    # le programme est suppose retirer ce potin de larrau
+    potin_range = potin_number-1
+    # now define the should_be_deleted method 
     f = File.new("fichier.csv", 'a+')
     f.each do |line|
       if should_be_deleted(line)
@@ -65,9 +68,9 @@ class Gossip
         f.write("\n")
       end
     end
-f.close
+    f.close
 
-File.new(filename).each {|line| p line }
+    File.new(filename).each {|line| p line }
     #retirer ce potin du csv
   end
 end
