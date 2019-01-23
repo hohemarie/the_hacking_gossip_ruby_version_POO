@@ -1,5 +1,7 @@
 def create_gossip
   Gossip.new
+  gossip = Gossip.new("Jean-Michel Concierge","Féfé est de Bordeaux")
+  gossip.save
 end
 
 class Gossip
