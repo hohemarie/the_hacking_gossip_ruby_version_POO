@@ -8,6 +8,8 @@ class Controller
     gossip = Gossip.new("Jean-Michel Concierge","Féfé est de Bordeaux")
     gossip.save
   end
+  def index_gossips
+  end
 end
 
 class Gossip
