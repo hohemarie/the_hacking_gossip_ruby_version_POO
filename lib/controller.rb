@@ -21,7 +21,7 @@ end
 
 class Gossip
   attr_reader :author, :content
-  
+#array dobjets de la classe Gossip  
   def initialize(author, content)
     @content = content
     @author = author
