@@ -30,7 +30,8 @@ class Gossip
     # creation d une array vide qui s appelle all_gossips
     all_gossips = []
     # chaque ligne de ton CSV.each do |ligne|
-    # 
+    # methode self.all qui va lire chaque ligne du CSV
+    fichier = File.open("fichier.csv","r") 
   end
   def destroy
     print "quel potin voulez vous supprimer"
