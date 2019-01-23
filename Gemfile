@@ -9,3 +9,4 @@ gem 'nokogiri', :git => 'https://github.com/tenderlove/nokogiri.git', :branch =>
 ruby '2.5.3.'
 gem 'pry'
 gem 'roo'
+gem 'bundler'
