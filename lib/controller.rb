@@ -9,7 +9,7 @@ class Controller
     gossip.save
   end
   def index_gossips
-    #demander au model un array qui contient tous les potins que l'on a en base
+    Gossip.all #demander au model un array qui contient tous les potins que l'on a en base
     View.index_gossips.self
   end
 end
